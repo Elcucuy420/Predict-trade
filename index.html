@@ -1,0 +1,39 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>A.O.W.I — HUD (Stable Sleek)</title>
+<link rel="manifest" href="manifest.json"/><meta name="theme-color" content="#0b0f14"/>
+<link rel="stylesheet" href="style.css"/>
+</head><body>
+<header class="topbar"><div class="brand"><div class="logo"></div><div class="title"><b>A.O.W.I</b><span>HUD — Stable</span></div></div>
+<div class="right"><div id="clock" class="mut"></div><button id="installBtn" class="ghost">Install</button><span id="state" class="mut">Ready</span></div></header>
+<main class="wrap">
+<section class="card">
+  <div class="toolbar">
+    <div class="tag">📥 Screenshots</div>
+    <input id="file" type="file" accept="image/*" multiple>
+    <select id="axisSide"><option value="right">Axis: Right</option><option value="left">Axis: Left</option></select>
+    <label class="lastp">Last price <input id="lastPrice" type="number" placeholder="e.g. 2335.70" step="0.01"></label>
+    <button id="analyze">Analyze</button>
+    <button id="copy" class="ghost">Copy</button>
+  </div>
+  <div id="status" class="mut">No internet, no OCR — always works. Enter a Last price to anchor absolute levels.</div>
+</section>
+<section class="grid">
+  <div class="card side">
+    <div class="panel-title">Snapshot</div>
+    <div class="kpis">
+      <div class="kpi"><div class="k">Trend</div><div id="kTrend" class="v">—</div></div>
+      <div class="kpi"><div class="k">ATR $</div><div id="kATR" class="v">—</div></div>
+      <div class="kpi"><div class="k">RSI</div><div id="kRSI" class="v">—</div></div>
+      <div class="kpi"><div class="k">MACD Hist</div><div id="kMACD" class="v">—</div></div>
+      <div class="kpi"><div class="k">BB Width</div><div id="kBB" class="v">—</div></div>
+    </div>
+  </div>
+  <div class="card main">
+    <div class="panel-title">Action Tickets — 24h</div>
+    <div id="tickets" class="tickets"></div>
+  </div>
+</section></main>
+<div id="spinner" class="spinner hidden">Analyzing…</div>
+<script src="app.js"></script>
+</body></html>
